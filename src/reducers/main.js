@@ -84,7 +84,8 @@ const applyFilters = (state) => {
         const {appliedToFilter, allPrompts} = state;
         if (SCOPE.onFilter) {
 
-            console.log(SCOPE)
+            SCOPE.API.activeLayers[2] = true
+            SCOPE.API.activeLayers[3] = true
             const promptState = {};
             const prompts = [];
 
@@ -431,6 +432,16 @@ const mainReducer = (state = initialState, action) => {
                     $unset: partialSelectedFeaturesKeys
                 }
             });
+            API().buildLayer(state.layers[2], enrichedSources[state.layers[2].enrichedSource]);
+            API().buildLayer(state.layers[3], enrichedSources[state.layers[3].enrichedSource]);
+
+            setTimeout(() => {
+                API().toggleLayer(state.layers[2].layerId, true)
+                state.layers[2].enabled = true
+                API().toggleLayer(state.layers[3].layerId, true)
+                state.layers[3].enabled = true
+            }, 1000)
+
             applyFilters(newApplyFilterState);
             return newApplyFilterState;
         case 'WORKSPACE_SELECTION_CHANGE':
@@ -843,6 +854,7 @@ const mainReducer = (state = initialState, action) => {
                 }
             });
         case 'FEATURE_CLICK':
+        if(!state.enrichedSources[action.payload.layerId].dataKeys) {
             return update(state, {
                 featureInfo: {
                     $set: {
@@ -857,6 +869,10 @@ const mainReducer = (state = initialState, action) => {
                     $set: 'PANEL.INFO_PANEL'
                 }
             });
+        } else {
+            return false
+        }
+            
         case 'CHANGE_BASEMAP':
             if (state.basemap === basemap) return state;
             API().changeBasemap(basemap);
