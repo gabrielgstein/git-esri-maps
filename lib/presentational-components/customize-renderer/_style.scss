@@ -1,0 +1,250 @@
+@import "../../variables";
+$componentBaseClass : 'customize-renderer';
+
+.#{$componentBaseClass} {
+  width: 345px;
+
+  .rc-slider-mark {
+    pointer-events: none;
+  }
+
+}
+
+.#{$componentBaseClass}-default-values {
+
+}
+
+.#{$componentBaseClass}-default-options {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.#{$componentBaseClass}-metric-selection {
+
+}
+.#{$componentBaseClass}-field {
+  width: 100%;
+  margin: 7px 0;
+}
+
+.#{$componentBaseClass}-metric-header {
+  display: flex;
+  justify-content: space-between;
+}
+.#{$componentBaseClass}-metric-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.#{$componentBaseClass}-metric-text {
+
+}
+
+.#{$componentBaseClass}-size-floating {
+  position: absolute;
+  left: -40px;
+  cursor: pointer;
+  margin-top: 2px;
+
+  .#{$componentBaseClass}-info {
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    box-shadow: 0 1px 2px 1px;
+    border: 2px solid white;
+    background: #154673;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+}
+
+.#{$componentBaseClass}-shape-floating {
+  position: absolute;
+  left: -38px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.#{$componentBaseClass}-header {
+  display: flex;
+  padding-bottom: 8px;
+  justify-content: space-between;
+}
+
+.#{$componentBaseClass}-palette-container {
+  height: 250px;
+  display: flex;
+}
+
+.#{$componentBaseClass}-palette {
+  height: 100%;
+  border-radius: 6px;
+  width: 30px;
+  cursor: pointer;
+  margin: 0 3px;
+
+  &.selected {
+    border: solid 2px #565656;
+  }
+}
+
+
+.#{$componentBaseClass}-content {
+  margin-top: 20px;
+  position: relative;
+  padding: 16px 3px;
+  overflow: auto;
+}
+
+.#{$componentBaseClass}-colors-selector {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 1;
+  left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.#{$componentBaseClass}-actions {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  width: 102px;
+  justify-content: space-between;
+}
+
+.#{$componentBaseClass}-default-actions {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  justify-content: center;
+}
+
+
+.#{$componentBaseClass}-unique-values, .#{$componentBaseClass}-default-values {
+
+  .#{$componentBaseClass}-label {
+    flex: 1;
+    margin-left: 12px;
+  }
+
+  .#{$componentBaseClass}-info {
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    box-shadow: 0 1px 2px 1px;
+    border: 2px solid white;
+
+    svg {
+      margin: 3px;
+    }
+
+    &.size {
+      background: #154673;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+  }
+
+  .#{$componentBaseClass}-unique-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin-top: 6px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    .ant-popover-inner-content {
+      padding: 0 !important;
+    }
+  }
+
+}
+
+.#{$componentBaseClass}-breaks-values {
+  flex: 2;
+  height: 100%;
+
+  .#{$componentBaseClass}-label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+
+  .#{$componentBaseClass}-tooltip {
+    position: relative;
+    background: #595959;
+    color: #fff;
+    width: auto;
+    padding: 0 10px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .#{$componentBaseClass}-tooltip:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #595959;
+    border-width: 6px;
+    margin-top: -6px;
+  }
+
+  .#{$componentBaseClass}-option {
+    position: absolute;
+    left: 45px;
+    width: 290px;
+    height: 32px;
+    margin-bottom: -16px;
+    display: flex;
+    background-color: #f0f0f0;
+  }
+
+}
+
+
+.#{$componentBaseClass}-options {
+  display: flex;
+}
+
+.#{$componentBaseClass}-renderer-type {
+  max-width: 110px;
+  padding-right: 4px;
+}
+
+.#{$componentBaseClass}-classification {
+  flex: 1;
+  padding-right: 4px;
+  input {
+    width: 100%;
+  }
+}
+
+.#{$componentBaseClass}-breaks {
+  max-width: 78px;
+}
+
+.#{$componentBaseClass}-content {
+  height: 275px;
+}

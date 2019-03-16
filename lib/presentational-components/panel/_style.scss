@@ -1,0 +1,50 @@
+@import "../../variables";
+$componentBaseClass : 'panel-component';
+
+.#{$componentBaseClass} {
+
+  height: 100%;
+  width: auto;
+  display: flex;
+  overflow: hidden;
+
+  &:hover {
+    overflow-y: auto;
+  }
+
+  .#{$componentBaseClass}-helper-bar {
+    width: 11px;
+    background-color: #154673;
+    cursor: pointer;
+  }
+  .#{$componentBaseClass}-icons {
+    width: 50px;
+    position: absolute;
+    left: -50px;
+    height: 100%;
+
+    .#{$componentBaseClass}-icon {
+
+      &.bottom {
+        position: absolute;
+        bottom: 0;
+      }
+
+      path {
+        fill: #fff;
+      }
+
+      .#{$componentBaseClass}-module-icon {
+        color: #f5f4f9 !important;
+      }
+    }
+
+
+  }
+
+  .#{$componentBaseClass}-modules {
+    width: 450px;
+    overflow: hidden;
+  }
+
+}

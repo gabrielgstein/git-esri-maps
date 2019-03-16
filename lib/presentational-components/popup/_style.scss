@@ -1,0 +1,64 @@
+@import "../../variables";
+$componentBaseClass : 'popup-component';
+
+.#{$componentBaseClass} {
+
+  position: fixed;
+  z-index: 100;
+  background: white;
+  white-space: pre-wrap;
+  transition: opacity 150ms cubic-bezier(0.22, 0.61, 0.36, 1), visibility 150ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  box-shadow: 0 2px 4px 1px rgba(128, 125, 125, 0.6);
+  border-radius: 4px;
+  min-width: 250px;
+
+  .arrow-down {
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 10px);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+  }
+
+  .#{$componentBaseClass}-image {
+    position: relative;
+
+    img {
+      width: auto;
+      max-height: 200px;
+    }
+
+  }
+
+  .#{$componentBaseClass}-title {
+    font-weight: bold;
+    font-size: 110%;
+  }
+
+  .#{$componentBaseClass}-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4px;
+  }
+
+  .#{$componentBaseClass}-apply {
+    margin-right: 10px;
+  }
+
+  .#{$componentBaseClass}-subtitle {
+    color: #5e5e5e;
+  }
+
+  .#{$componentBaseClass}-body {
+    position: relative;
+    padding: 8px;
+  }
+
+
+
+
+}

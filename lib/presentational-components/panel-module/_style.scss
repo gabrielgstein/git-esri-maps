@@ -1,0 +1,56 @@
+@import "../../variables";
+$componentBaseClass : 'panel-module';
+
+.#{$componentBaseClass} {
+
+  width: 450px;
+  height: 100%;
+  flex-direction: column;
+  margin-bottom: 1px;
+  position: relative;
+
+  .#{$componentBaseClass}-header {
+    display: flex;
+    right: 0;
+    left: 0;
+    top: 0;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    height: 49px;
+    border: solid 1px #cfcfd0;
+    box-sizing: border-box !important;
+
+    .#{$componentBaseClass}-icon {
+      width: 52px;
+      fill: $lightColor;
+      background-color: rgba(92, 111, 122, 1);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .#{$componentBaseClass}-title {
+      flex: 8;
+      display: flex;
+      margin-left: 20px;
+    }
+
+    .#{$componentBaseClass}-expander {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .#{$componentBaseClass}-content {
+    border-bottom: solid 1px #cfcfd0;
+    transition: height 300ms ease;
+    height: calc(100% - 49px);
+    background-color: #efefef;
+    overflow: auto;
+  }
+
+}

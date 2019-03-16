@@ -1,0 +1,70 @@
+@import "../../variables";
+$componentBaseClass : 'map-container';
+
+.#{$componentBaseClass} {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .#{$componentBaseClass}-top {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+    display: flex;
+  }
+
+  .#{$componentBaseClass}-navigation-tools {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 80px;
+    z-index: 1;
+
+    .#{$componentBaseClass}-icons-group {
+      position: relative;
+      z-index: 1;
+    }
+
+    .#{$componentBaseClass}-hidden {
+      position: absolute;
+      top: 0;
+      transition: left 300ms ease, visibility 300ms ease;
+    }
+
+    .#{$componentBaseClass}-icon {
+      margin: 2px;
+      height: 42px;
+      width: 42px;
+      color: rgb(60, 71, 74);
+      background-color: #f5f4f9 ;
+
+      &.active {
+        background-color: #154673;
+        path {
+          fill: #f5f4f9;
+        }
+      }
+
+      path {
+        fill: #154673;
+      }
+
+    }
+  }
+
+
+
+  .#{$componentBaseClass}-map-instance {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+  }
+
+  .esriMapContainer {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+}

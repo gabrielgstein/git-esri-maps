@@ -1,0 +1,190 @@
+@import "../../variables";
+$componentBaseClass : 'layer-component';
+
+.#{$componentBaseClass}-menu {
+  width: 450px;
+}
+
+.#{$componentBaseClass} {
+  position: relative;
+  height: 100%;
+  border: 1px solid #d4d4d7;
+  z-index: 51;
+  background: #e8e7ec;
+
+  &.dragging {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: $primaryColor;
+    font-size: 16px;
+  }
+
+  .#{$componentBaseClass}-loading {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 253, 253, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .#{$componentBaseClass}-zoom-range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .#{$componentBaseClass}-warning {
+      color: #8d0c0d;
+      font-size: 14px;
+    }
+
+  }
+
+  .#{$componentBaseClass}-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 44px;
+
+    .#{$componentBaseClass}-expand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 4px;
+      cursor: pointer;
+    }
+
+    .#{$componentBaseClass}-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      width: calc(100% - 215px);
+
+      .#{$componentBaseClass}-title {
+        margin-right: 15px;
+        flex: 1;
+        overflow: hidden;
+        white-space: pre;
+      }
+
+      .#{$componentBaseClass}-content-collapsed {
+        margin: 6px 0;
+        max-height: 44px;
+        overflow: hidden;
+        flex: 1;
+      }
+
+    }
+
+    .#{$componentBaseClass}-actions {
+      display: flex;
+
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 4px;
+        cursor: pointer;
+      }
+
+      path {
+        fill: #646465;
+      }
+
+    }
+
+    .cursor-move {
+      cursor: move;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .#{$componentBaseClass}-no-legend {
+    margin: 0 12px;
+    color: #8d8c8f;
+    font-size: 80%;
+  }
+
+  .#{$componentBaseClass}-content {
+    transition: height 300ms ease;
+    overflow: hidden;
+
+    .#{$componentBaseClass}-actions {
+      align-self: flex-start;
+      width: 44px;
+
+      .#{$componentBaseClass}-layer-action {
+
+        path {
+          fill: #607176;
+        }
+
+      }
+    }
+
+    .#{$componentBaseClass}-measurement {
+      height: auto;
+    }
+
+    .#{$componentBaseClass}-content-expanded {
+      transition: opacity 1s ease, height 1s ease;;
+      overflow: hidden;
+
+      .#{$componentBaseClass}-error {
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .#{$componentBaseClass}-visibility-slider {
+        display: flex;
+        align-items: center;
+        padding: 0 14px;
+
+        path {
+          fill: #607176;
+        }
+
+        .#{$componentBaseClass}-slider {
+          width: 100%;
+          margin: 0 14px;
+
+          .rc-slider {
+            display: flex;
+            align-items: center;
+          }
+
+          .rc-slider-handle {
+            margin-top: 0 !important;
+          }
+
+        }
+      }
+
+      .#{$componentBaseClass}-footer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        justify-content: center;
+      }
+
+    }
+
+    .#{$componentBaseClass}-content-collapsed {
+      display: flex;
+      align-items: center;
+      transition: opacity 1s ease, height 1s ease;
+      overflow: hidden;
+    }
+
+  }
+
+}
+

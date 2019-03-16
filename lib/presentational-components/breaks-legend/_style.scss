@@ -1,0 +1,182 @@
+@import "../../variables";
+$componentBaseClass : 'breaks-legend';
+
+.#{$componentBaseClass} {
+  flex: 1;
+  &:first-child {
+    margin-left: 30px;
+  }
+
+  .#{$componentBaseClass}-default {
+
+    .#{$componentBaseClass}-edit {
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .#{$componentBaseClass}-header {
+      padding-left: 12px;
+      display: flex;
+    }
+
+    .#{$componentBaseClass}-body {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 14px;
+
+      .#{$componentBaseClass}-item:first-child {
+        margin-top: 0;
+      }
+
+      .#{$componentBaseClass}-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .#{$componentBaseClass}-item {
+        display: flex;
+        margin-right: 10px;
+
+        .#{$componentBaseClass}-label {
+          margin-left: 5px;
+          white-space: nowrap;
+          width: 160px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .#{$componentBaseClass}-symbol {
+        width: 22px;
+        min-width: 22px;
+        height: 22px;
+        min-height: 22px;
+      }
+
+      .#{$componentBaseClass}-image {
+        width: 22px;
+        min-width: 22px;
+        height: 22px;
+        min-height: 22px;
+      }
+
+      .main {
+        width: 50px;
+        height: auto;
+        position: relative;
+      }
+      .outer-mask {
+        position: absolute;
+        left: 9px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 120px;
+        overflow: hidden;
+        -webkit-transform: skew(20deg, 0deg);
+        -ms-transform: skew(20deg, 0deg);
+        transform: skew(-5deg, 0deg);
+      }
+      .inner-mask {
+        position: absolute;
+        left: -54px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 120px;
+        overflow: hidden;
+        -webkit-transform: skew(-40deg, 0deg);
+        -ms-transform: skew(-40deg, 0deg);
+        transform: skew(10deg, 0deg);
+      }
+      .content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 86px;
+      }
+
+
+      .#{$componentBaseClass}-bar {
+        width: 20px;
+        border: 1px solid rgb(202, 202, 203);
+
+        &.sized {
+          transform: perspective(5px) rotateX(1deg) translateY(-10%);
+          width: 28px;
+        }
+      }
+
+      .#{$componentBaseClass}-textual {
+
+        .#{$componentBaseClass}-label {
+          white-space: nowrap;
+          margin: 4px 5px;
+          width: 160px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .#{$componentBaseClass}-label:first-child {
+          margin-top: 0;
+        }
+
+        .#{$componentBaseClass}-label:last-child {
+          margin-bottom: 0;
+        }
+
+      }
+
+    }
+  }
+
+  .#{$componentBaseClass}-preview {
+
+    .#{$componentBaseClass}-body {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      font-size: 14px;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+
+      .#{$componentBaseClass}-overflow-bar {
+        background: linear-gradient(to right, transparent 94%, #e8e7ec);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .#{$componentBaseClass}-item {
+        display: flex;
+        padding-right: 4px;
+
+        .#{$componentBaseClass}-symbol {
+          width: 22px;
+          min-width: 22px;
+          height: 22px;
+          min-height: 22px;
+        }
+
+        .#{$componentBaseClass}-image {
+          width: 22px;
+          min-width: 22px;
+          height: 22px;
+          min-height: 22px;
+        }
+      }
+
+      .#{$componentBaseClass}-bar {
+        height: 20px;
+        width: 110px;
+        border: 1px solid rgb(202, 202, 203);
+      }
+
+    }
+  }
+
+}
+

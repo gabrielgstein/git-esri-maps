@@ -1,0 +1,107 @@
+@import "../../variables";
+$componentBaseClass : 'simple-legend';
+
+.#{$componentBaseClass} {
+  &:first-child {
+    margin-left: 30px;
+  }
+
+
+  .#{$componentBaseClass}-preview {
+    .#{$componentBaseClass}-body {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      font-size: 14px;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+
+      .#{$componentBaseClass}-overflow-bar {
+        background: linear-gradient(to right, transparent 94%, #e8e7ec);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .#{$componentBaseClass}-item {
+        display: flex;
+        padding-right: 4px;
+
+        .#{$componentBaseClass}-symbol {
+          width: 22px;
+          min-width: 22px;
+          height: 22px;
+          min-height: 22px;
+        }
+
+        .#{$componentBaseClass}-image {
+          width: 22px;
+          min-width: 22px;
+          height: 22px;
+          min-height: 22px;
+        }
+      }
+    }
+  }
+
+  .#{$componentBaseClass}-default {
+
+    .#{$componentBaseClass}-header {
+      padding-left: 12px;
+      white-space: nowrap;
+    }
+
+    .#{$componentBaseClass}-edit {
+      margin-left: 12px;
+    }
+
+    .#{$componentBaseClass}-body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      font-size: 14px;
+
+      .#{$componentBaseClass}-item:first-child {
+        margin-top: 0;
+      }
+
+      .#{$componentBaseClass}-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .#{$componentBaseClass}-item {
+        display: flex;
+        margin-right: 10px;
+
+        .#{$componentBaseClass}-label {
+          margin-left: 5px;
+          white-space: nowrap;
+          width: 160px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .#{$componentBaseClass}-symbol {
+        width: 22px;
+        min-width: 22px;
+        height: 22px;
+        min-height: 22px;
+      }
+
+      .#{$componentBaseClass}-image {
+        width: 22px;
+        min-width: 22px;
+        height: 22px;
+        min-height: 22px;
+      }
+
+    }
+  }
+
+
+}
+

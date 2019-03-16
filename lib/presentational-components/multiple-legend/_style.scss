@@ -1,0 +1,19 @@
+@import "../../variables";
+$componentBaseClass : 'multiple-legend';
+
+
+.#{$componentBaseClass} {
+  flex: 1;
+
+  .#{$componentBaseClass}-preview {
+
+  }
+
+  .#{$componentBaseClass}-default {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+}
+

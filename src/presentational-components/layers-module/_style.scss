@@ -1,0 +1,11 @@
+@import "../../variables";
+$componentBaseClass : 'layers-module';
+
+.#{$componentBaseClass} {
+
+  .#{$componentBaseClass}-actions {
+    padding: 10px;
+  }
+
+}
+
