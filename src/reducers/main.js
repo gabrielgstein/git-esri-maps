@@ -84,6 +84,7 @@ const applyFilters = (state) => {
         const {appliedToFilter, allPrompts} = state;
         if (SCOPE.onFilter) {
 
+            console.log(SCOPE)
             const promptState = {};
             const prompts = [];
 
